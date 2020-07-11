@@ -6,6 +6,7 @@ const jwt = require("jwt-then");
 
 
 
+
 //**Connect to mongoodb**
 const connect = mongoose.connect(process.env.DATABASE,{
     useNewUrlParser:true,
@@ -28,7 +29,7 @@ require("./models/Message");
 
 const app = require('./app');
 
-const server = app.listen(5000, () => {
+const server = app.listen(process.env.PORT || 5000, () => {
     console.log("Server listening on port 5000");
   });
 

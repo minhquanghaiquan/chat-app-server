@@ -31,7 +31,7 @@ app.post('/getroomname', async (req, res)=> {
 //Setup Error Handlers
 app.use(errorHandlers.notFound);
 app.use(errorHandlers.mongoseErrors);
-if (process.env.ENV === "DEVELOPMENT") {
+if (process.env.ENVD === "DEVELOPMENT") {
   app.use(errorHandlers.developmentErrors);
 } else {
   app.use(errorHandlers.productionErrors);
